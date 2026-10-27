@@ -22,3 +22,4 @@ def top_ten(subreddit):
         return
     for child in children[:10]:
         print(child.get("data", {}).get("title"))
+        
