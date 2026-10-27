@@ -1,10 +1,24 @@
 #!/usr/bin/python3
-"""Top ten hot posts for a subreddit."""
+"""Query Reddit API for top ten hot posts of a subreddit."""
 
-import sys
+import requests
 
 
 def top_ten(subreddit):
-    """Write OK without a trailing newline."""
-    sys.stdout.write("OK")
-    sys.stdout.flush()
+    """Print titles of the first 10 hot posts for a subreddit."""
+    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    headers = {"User-Agent": "linux:alu-scripting:v1.0 (by /u/mellow)"}
+    params = {"limit": 10}
+    response = requests.get(
+        url, headers=headers, params=params, allow_redirects=False
+    )
+    if response.status_code != 200:
+        print(None)
+        return
+    data = response.json().get("data", {})
+    children = data.get("children", [])
+    if not children:
+        print(None)
+        return
+    for child in children[:10]:
+        print(child.get("data", {}).get("title"))
