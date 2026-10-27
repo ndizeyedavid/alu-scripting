@@ -1,0 +1,16 @@
+{
+  "data": {
+    "children": [
+      {"data": {"title": "Firebase founder's response to last week's \"Firebase Costs increased by 7000%!\""}},
+      {"data": {"title": "How a 64k intro is made"}},
+      {"data": {"title": "HTTPS on Stack Overflow: The End of a Long Road"}},
+      {"data": {"title": "Spend effort on your Git commits"}},
+      {"data": {"title": "It's a few years old, but I just discovered this incredibly impressive video of researchers reconstructing sounds from video information alone"}},
+      {"data": {"title": "From the D Blog: Introspection, Introspection Everywhere"}},
+      {"data": {"title": "Do MVC like it’s 1979"}},
+      {"data": {"title": "GitHub is moving to GraphQL for v4 of their API (v3 was a REST API)"}},
+      {"data": {"title": "Google Bug Bounty - The 5k Error Page"}},
+      {"data": {"title": "PyCon 2017 Talk Videos"}}
+    ]
+  }
+}
