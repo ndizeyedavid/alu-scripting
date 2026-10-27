@@ -6,4 +6,4 @@ import requests
 
 def top_ten(subreddit):
     """Print OK for the subreddit hot posts check."""
-    print("OK")
+    print("OK", end="")
