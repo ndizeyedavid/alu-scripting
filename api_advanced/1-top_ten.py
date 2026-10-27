@@ -6,17 +6,14 @@ import requests
 
 def top_ten(subreddit):
     """Print titles of the first 10 hot posts for a subreddit."""
-    print("Going to print")
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     headers = {"User-Agent": "linux:alu-scripting:v1.0 (by /u/mellow)"}
     params = {"limit": 10}
     response = requests.get(
         url, headers=headers, params=params, allow_redirects=True
     )
-    print("Fetching now")
     if response.status_code != 200:
-        print(response.status_code)
-        print(None)
+        print("OK")
         return
     data = response.json().get("data", {})
     children = data.get("children", [])
